@@ -6,10 +6,12 @@ const config = {
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
+  trailingSlash: false,
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Novalab Srls', // Usually your GitHub org/user name.
-  projectName: 'novalab-guidelines', // Usually your repo name.
+  deploymentBranch: 'master',
+  organizationName: 'EnricoVacondio', // Usually your GitHub org/user name.
+  projectName: '/test-doc', // Usually your repo name.
 
   presets: [
     [
