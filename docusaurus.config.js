@@ -4,7 +4,7 @@ const config = {
   title: 'Novalab Guidelines',
   tagline: '',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/guidelines/',
+  baseUrl: '/test-doc/',
   onBrokenLinks: 'throw',
   trailingSlash: false,
   onBrokenMarkdownLinks: 'warn',
