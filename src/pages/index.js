@@ -50,7 +50,7 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <header className={clsx(styles.heroBanner)}>
-        <div className="container">
+        <div className="container text-left mx-auto  pt-12 pb-20">
           <h1 className="hero__title font-black">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={clsx('mt-12')}>
@@ -67,7 +67,7 @@ export default function Home() {
       </header>
       <main>
         {features && features.length > 0 && (
-          <section className={clsx('container w-screen text-center pb-5')}>
+          <section className={clsx('container mx-auto text-center pb-5')}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {features.map(({title, imageUrl, description}) => (
                   <Feature

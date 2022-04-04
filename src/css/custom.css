@@ -9,6 +9,18 @@
   font-family: Poppins;
  }
 
+ h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: Poppins;
+}
+
+h2 {
+   font-size: 2rem;
+   font-weight: bold;
+   font-family: Poppins;
+}
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;

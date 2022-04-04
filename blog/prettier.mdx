@@ -1,0 +1,32 @@
+---
+slug: prettier-post
+title: Prettier Configuration
+authors: []
+tags: [prettier, typescript]
+sidebar_position: 2
+---
+
+Prettier configuration for react native project
+
+## Install required dependencies
+
+```bash
+yarn add -D prettier
+```
+
+## Add a the plugins
+
+First of all create a file named `.prettierrc.js` in the root directory if it doesn't exists.
+After that modify it and add the following lines:
+
+```js
+module.exports = {
+  bracketSpacing: true,
+  jsxBracketSameLine: true,
+  singleQuote: true,
+  trailingComma: 'all',
+  arrowParens: 'avoid',
+  tabWidth: 2,
+  bracketSameLine: true
+};
+```

@@ -22,10 +22,10 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
         },
         blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          showReadingTime: false,
+          blogSidebarTitle: 'Configurations',
+          blogSidebarCount: 'ALL',
+          sortPosts: 'descending',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

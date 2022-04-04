@@ -1,0 +1,65 @@
+---
+slug: eslint-post
+title: Eslint Configuration
+authors: []
+tags: [prettier, typescript]
+---
+
+Eslint configuration for react native project
+
+## Install required dependencies
+
+```bash
+yarn add -D @typescript-eslint/parser
+```
+
+```bash
+yarn add -D @typescript-eslint/eslint-plugin
+```
+
+## Add a the plugins
+
+First of all create a file named `.eslintrc.js` in the root directory if it doesn't exists.
+After that to use eslint configuration
+
+Modify the `.eslintrc.js` file and add the following lines:
+
+```js title=".eslintrc.js"
+module.exports = {
+  root: true,
+  extends: ['@react-native-community'],
+  // highlight-start
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  // highlight-end
+  ignorePatterns: ['node_modules']
+};
+```
+
+
+## Override the rules
+
+```js title=".eslintrc.js"
+module.exports = {
+  root: true,
+  extends: ['@react-native-community'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  // highlight-start
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
+        '@typescript-eslint/no-shadow': ['error'],
+        'no-shadow': 'off',
+        'no-undef': 'off',
+        'no-console': 'error',
+      },
+    },
+  ],
+  // highlight-end
+  ignorePatterns: ['node_modules', 'coverage'],
+};
+```
