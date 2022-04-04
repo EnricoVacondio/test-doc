@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkguidelines=self.webpackChunkguidelines||[]).push([[192],{9779:function(e){e.exports=JSON.parse('{"allTagsPath":"/test-doc/blog/tags","name":"prettier","count":2,"permalink":"/test-doc/blog/tags/prettier"}')}}]);

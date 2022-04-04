@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkguidelines=self.webpackChunkguidelines||[]).push([[314],{756:function(t){t.exports=JSON.parse('{"prettier":{"allTagsPath":"/test-doc/blog/tags","name":"prettier","count":2,"permalink":"/test-doc/blog/tags/prettier"},"typescript":{"allTagsPath":"/test-doc/blog/tags","name":"typescript","count":2,"permalink":"/test-doc/blog/tags/typescript"}}')}}]);
