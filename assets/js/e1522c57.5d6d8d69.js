@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkguidelines=self.webpackChunkguidelines||[]).push([[1209],{964:function(e){e.exports=JSON.parse('[{"name":"logger","permalink":"/test-doc/services/tags/logger","count":1}]')}}]);

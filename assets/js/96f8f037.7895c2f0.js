@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkguidelines=self.webpackChunkguidelines||[]).push([[3143],{7973:function(s){s.exports=JSON.parse('{"name":"icons","permalink":"/test-doc/icons/tags/icons","docs":[{"id":"icon","title":"Icons names","description":"","permalink":"/test-doc/icons/icons"}],"allTagsPath":"/test-doc/icons/tags"}')}}]);

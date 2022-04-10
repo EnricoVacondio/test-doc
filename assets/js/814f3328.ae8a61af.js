@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkguidelines=self.webpackChunkguidelines||[]).push([[535],{5641:function(t){t.exports=JSON.parse('{"title":"Configurations","items":[{"title":"Eslint Configuration","permalink":"/test-doc/blog/eslint-post"},{"title":"Prettier Configuration","permalink":"/test-doc/blog/prettier-post"}]}')}}]);

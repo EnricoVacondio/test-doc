@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkguidelines=self.webpackChunkguidelines||[]).push([[8631],{5805:function(e){e.exports=JSON.parse('{"name":"logger","permalink":"/test-doc/services/tags/logger","docs":[{"id":"logger","title":"Logger service","description":"A Logger service for react-native","permalink":"/test-doc/services/logger"}],"allTagsPath":"/test-doc/services/tags"}')}}]);
