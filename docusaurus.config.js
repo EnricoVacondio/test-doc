@@ -20,6 +20,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          path: 'docs',
         },
         blog: {
           showReadingTime: false,
@@ -45,17 +46,30 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
+            to: '/docs/intro',
             label: 'Guidelines',
+            position: 'left',
+            activeBaseRegex: `/docs/`,
+          },
+          {
+            to: '/services/intro',
+            label: 'Services',
+            position: 'left',
+            activeBaseRegex: `/services/`,
           },
           {
             to: '/blog',
             label: 'Configurations',
             position: 'left',
-          }
+          },
+          {
+            to: '/icons/intro',
+            label: 'Icons',
+            position: 'left',
+            activeBaseRegex: `/icons/`,
+          },
         ],
+        hideOnScroll: false,
       },
     }),
   
@@ -71,6 +85,24 @@ const config = {
           },
         };
       },
+      [
+        '@docusaurus/plugin-content-docs',
+        {
+          id: 'services',
+          path: 'services',
+          routeBasePath: 'services',
+          sidebarPath: require.resolve('./sidebars.js'),
+        }, 
+      ],
+      [
+        '@docusaurus/plugin-content-docs',
+        {
+          id: 'icons',
+          path: 'icons',
+          routeBasePath: 'icons',
+          sidebarPath: require.resolve('./sidebars.js'),
+        }, 
+      ]
     ],
 };
 

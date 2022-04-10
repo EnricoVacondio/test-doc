@@ -15,15 +15,10 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 
-const features = [
-  {
-    title: 'React native',
-    imageUrl: 'img/react_native_logo.png',
-    description: null,
-  },
+const configurations = [
   {
     title: 'Eslint',
-    imageUrl: 'img/es_lint.webp',
+    imageUrl: 'img/eslint.webp',
     description: null,
   },
   {
@@ -31,13 +26,26 @@ const features = [
     imageUrl: 'img/prettier.jpeg',
     description: null,
   },
+  { 
+    title: 'Husky',
+    imageUrl: 'img/husky.webp',
+    description: null,
+  }
 ];
+
+const services = [
+  {
+    title: 'Logger',
+    imageUrl: 'img/log.jpg',
+    description: null,
+  }
+]
 
 function Feature({imageUrl, title}) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className="col col--4 max-w-sm rounded overflow-hidden shadow-lg opacity-1 rounded-lg image-max-sizes custom-card">
-      <img className="w-full h-full object-cover" src={imgUrl} alt={title} />
+    <div className="col col--4 overflow-hidden object-center shadow-lg opacity-1 rounded-lg image-max-sizes custom-card mt-4 mb-4">
+      <img className="w-full h-full object-fill object-center" src={imgUrl} alt={title} />
     </div>
   );
 }
@@ -50,7 +58,7 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <header className={clsx(styles.heroBanner)}>
-        <div className="container text-left mx-auto  pt-12 pb-20">
+        <div className="container text-center mx-auto  pt-12 pb-20">
           <h1 className="hero__title font-black">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={clsx('mt-12')}>
@@ -66,10 +74,27 @@ export default function Home() {
         </div>
       </header>
       <main>
-        {features && features.length > 0 && (
-          <section className={clsx('container mx-auto text-center pb-5')}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {features.map(({title, imageUrl, description}) => (
+        {configurations && configurations.length > 0 && (
+          <section className={clsx('container mx-auto text-center pb-5 mt-12')}>
+            <h4 className='hero__subtitle font-bold mt-12 mb-12 self-start'>Configurations</h4>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 place-items-center">
+                {configurations.map(({title, imageUrl, description}) => (
+                  <Feature
+                    key={title}
+                    title={title}
+                    imageUrl={imageUrl}
+                    description={description}
+                  />
+                ))}
+            </div>
+          </section>
+        )}
+
+        {services && services.length > 0 && (
+          <section className="container mx-auto text-center pb-5 mt-12">
+            <h4 className='hero__subtitle font-bold mt-12 mb-12 self-start'>Services</h4>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 place-items-center">
+                {services.map(({title, imageUrl, description}) => (
                   <Feature
                     key={title}
                     title={title}

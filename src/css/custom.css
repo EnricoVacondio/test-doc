@@ -69,6 +69,7 @@ h2 {
 }
 
 .image-max-sizes {
+  max-width: 400px !important;
   max-height: 200px !important;
   min-height: 200px !important;
 }

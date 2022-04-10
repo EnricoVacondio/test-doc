@@ -1,0 +1,82 @@
+---
+slug: logger
+title: Logger service
+authors: []
+tags: [logger]
+sidebar_position: 2
+---
+
+A Logger service for react-native
+
+Due to rules that avoid console log during development (
+Please see: 
+**[Eslint rule](/blog/eslint-post#override-the-rules)** )
+
+```ts title="logger.service.ts"
+export interface LogService {
+  debug: (tag: string, ...args: any[]) => void;
+  info: (tag: string, ...args: any[]) => void;
+  warn: (tag: string, ...args: any[]) => void;
+  error: (tag: string, ...args: any[]) => void;
+}
+```
+
+```ts title="logger.adapter.ts"
+export class LogAdapter implements LogService {
+  debug = (tag: string, ...args: any[]) => {
+    this.log(LogLevel.debug, tag, ...args);
+  };
+
+  info = (tag: string, ...args: any[]) => {
+    this.log(LogLevel.info, tag, ...args);
+  };
+
+  warn = (tag: string, ...args: any[]) => {
+    this.log(LogLevel.warn, tag, ...args);
+  };
+
+  error = (tag: string, ...args: any[]) => {
+    this.log(LogLevel.error, tag, ...args);
+  };
+
+  log = (level: LogLevel, tag: string, ...args: any[]) => {
+    const formttedTag = `[${tag}]`;
+
+    switch (level) {
+      case LogLevel.debug:
+        if (__DEV__) {
+          console.debug(formttedTag, ...args);
+        }
+        break;
+      case LogLevel.info:
+        console.info(formttedTag, ...args);
+        break;
+      case LogLevel.warn:
+        if (__DEV__) {
+          console.warn(formttedTag, ...args);
+        } else {
+          this.log(LogLevel.info, tag, ...args);
+        }
+        break;
+      case LogLevel.error:
+        if (__DEV__) {
+          console.error(formttedTag, ...args);
+        } else {
+          this.log(LogLevel.info, tag, ...args);
+        }
+        break;
+      default:
+        break;
+    }
+  };
+}
+```
+
+```ts
+Object.defineProperty(global, 'logger', {
+  configurable: __DEV__, // needed for hot-reloading
+  get() {
+    return globalContainer.resolve<Services.LogService>(Token_LogService);
+  },
+});
+```
