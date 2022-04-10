@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkguidelines=self.webpackChunkguidelines||[]).push([[1836],{8105:function(e){e.exports=JSON.parse('[{"name":"icons","permalink":"/test-doc/icons/tags/icons","count":1},{"name":"resources","permalink":"/test-doc/icons/tags/resources","count":1},{"name":"font","permalink":"/test-doc/icons/tags/font","count":1}]')}}]);
